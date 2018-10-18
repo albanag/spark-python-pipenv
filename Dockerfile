@@ -25,7 +25,7 @@ RUN wget --quiet https://archive.apache.org/dist/spark/spark-2.1.3/spark-2.1.3-b
 
 ENV PATH /usr/local/spark/bin:$PATH
 ENV SPARK_HOME=/usr/local/spark/ 
-ENV PYTHONPATH=$SPARK_HOME/python/:$PYTHONPATH
+ENV PYTHONPATH=$SPARK_HOME/python/:$SPARK_HOME/python/lib/py4j-0.10.7-src.zip:$PYTHONPATH
 
 # install Python 3.5.2
 RUN apt-get update && \
